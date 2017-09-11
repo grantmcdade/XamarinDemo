@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Demo.Business\Demo.Business.csproj" />
+    <ProjectReference Include="..\Demo.DataAccess.Memory\Demo.DataAccess.Memory.csproj" />
+    <ProjectReference Include="..\Demo.Interfaces\Demo.Interfaces.csproj" />
+    <ProjectReference Include="..\Demo.Models\Demo.Models.csproj" />
+  </ItemGroup>
+
+</Project>

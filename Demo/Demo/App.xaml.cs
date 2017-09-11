@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Demo.Core;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace Demo
         public App()
         {
             InitializeComponent();
+
+            DemoContainer.PerformRegistration();
 
             MainPage = new Demo.MainPage();
         }
