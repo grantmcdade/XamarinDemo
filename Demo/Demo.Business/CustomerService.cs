@@ -13,12 +13,12 @@ namespace Demo.Business
             _dataSource = dataSource;
         }
 
-        IEnumerable<Customer> GetAll()
+        public IEnumerable<Customer> GetAll()
         {
             return _dataSource.GetAll();
         }
 
-        Customer Get(int id)
+        public Customer Get(int id)
         {
             return _dataSource.Get(id);
         }

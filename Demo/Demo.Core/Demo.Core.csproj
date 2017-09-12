@@ -5,7 +5,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Customers.xaml" />
+    <None Remove="CustomersDetail.xaml" />
+    <None Remove="CustomersMaster.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Include="App.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customers.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomersDetail.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomersMaster.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="MainPage.xaml">
@@ -28,6 +43,18 @@
   <ItemGroup>
     <Compile Update="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Customers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CustomersDetail.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CustomersMaster.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CustomersMenuItem.cs">
+      <SubType>Code</SubType>
     </Compile>
     <Compile Update="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
