@@ -26,6 +26,7 @@ namespace Demo.Core
 
             var page = (Page)Activator.CreateInstance(item.TargetType);
             page.Title = item.Title;
+            page.BindingContext = item;
 
             Detail = new NavigationPage(page);
             IsPresented = false;

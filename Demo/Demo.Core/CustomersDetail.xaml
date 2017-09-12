@@ -5,5 +5,13 @@
              Title="Detail">
   <StackLayout Padding="10">
     <Label Text="This is a detail page. To get the 'triple' line icon on each platform add a icon to each platform and update the 'Master' page with an Icon that references it."/>
-  </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Id: " FontAttributes="Bold" />
+            <Label Text="{Binding Id}" />
+        </StackLayout>
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Title: " FontAttributes="Bold" />
+            <Label Text="{Binding Title}" />
+        </StackLayout>
+    </StackLayout>
 </ContentPage>

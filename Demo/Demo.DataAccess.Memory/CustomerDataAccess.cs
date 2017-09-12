@@ -13,13 +13,13 @@ namespace Demo.DataAccess.Memory
             Customers = new List<Customer>()
             {
                 new Customer() {Id=1, Name="Bob", Tel="123"},
-                new Customer() {Id=1, Name="Fred", Tel="123"},
-                new Customer() {Id=1, Name="Steve", Tel="123"},
-                new Customer() {Id=1, Name="Paul", Tel="123"},
-                new Customer() {Id=1, Name="Mark", Tel="123"},
-                new Customer() {Id=1, Name="John", Tel="123"},
-                new Customer() {Id=1, Name="Noah", Tel="123"},
-                new Customer() {Id=1, Name="Liam", Tel="123"}
+                new Customer() {Id=2, Name="Fred", Tel="123"},
+                new Customer() {Id=3, Name="Steve", Tel="123"},
+                new Customer() {Id=4, Name="Paul", Tel="123"},
+                new Customer() {Id=5, Name="Mark", Tel="123"},
+                new Customer() {Id=6, Name="John", Tel="123"},
+                new Customer() {Id=7, Name="Noah", Tel="123"},
+                new Customer() {Id=8, Name="Liam", Tel="123"}
             };
         }
 

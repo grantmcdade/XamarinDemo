@@ -17,7 +17,7 @@ namespace Demo
             DemoContainer.PerformRegistration();
 
             // MainPage = new Demo.MainPage();
-            MainPage = new Demo.Core.CustomersMaster();
+            MainPage = new Demo.Core.Customers();
         }
 
         protected override void OnStart()

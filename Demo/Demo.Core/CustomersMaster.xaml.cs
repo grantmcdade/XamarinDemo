@@ -53,6 +53,7 @@ namespace Demo.Core
                 PropertyChanged.Invoke(this, new PropertyChangedEventArgs(propertyName));
             }
             #endregion
+
         }
     }
 }
