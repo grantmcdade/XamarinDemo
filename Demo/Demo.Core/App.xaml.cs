@@ -1,4 +1,4 @@
-﻿// using Demo.Core;
+﻿using Demo.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +14,7 @@ namespace Demo
         {
             InitializeComponent();
 
-            // DemoContainer.PerformRegistration();
+            DemoContainer.PerformRegistration();
 
             MainPage = new Demo.MainPage();
         }
