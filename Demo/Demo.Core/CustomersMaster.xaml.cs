@@ -24,6 +24,8 @@ namespace Demo.Core
 
             BindingContext = new CustomersMasterViewModel();
             ListView = MenuItemsListView;
+
+            ((CustomersMasterViewModel)BindingContext).FetchCutomers();
         }
 
         class CustomersMasterViewModel : INotifyPropertyChanged
@@ -32,17 +34,20 @@ namespace Demo.Core
 
             public CustomersMasterViewModel()
             {
-                var cs = DemoContainer.Resolve<CustomerService>();
-                var customers = cs.GetAll();
-
                 MenuItems = new ObservableCollection<CustomersMenuItem>();
+            }
+            
+            public async void FetchCutomers()
+            {
+                var cs = DemoContainer.Resolve<CustomerService>();
+                var customers = await cs.GetAll();
 
                 foreach (var customer in customers)
                 {
                     MenuItems.Add(new CustomersMenuItem() { Id = customer.Id, Title = customer.Name });
                 }
             }
-            
+
             #region INotifyPropertyChanged Implementation
             public event PropertyChangedEventHandler PropertyChanged;
             void OnPropertyChanged([CallerMemberName] string propertyName = "")

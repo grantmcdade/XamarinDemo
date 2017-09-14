@@ -2,14 +2,17 @@
 using Demo.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
 
-namespace Demo.DataAccess.Memory
+namespace Demo.Tests
 {
-    public class CustomerDataAccess : IRepository<Customer>
+    class MockCustomerData : IRepository<Customer>
     {
-        public CustomerDataAccess()
+        public IEnumerable<Customer> Customers { get; set; }
+
+        public MockCustomerData()
         {
             Customers = new List<Customer>()
             {
@@ -24,16 +27,14 @@ namespace Demo.DataAccess.Memory
             };
         }
 
-        public IEnumerable<Customer> Customers { get; set; }
-
         public Task<Customer> Get(int id)
         {
-            return new Task<Customer>(() => Customers.Where(c => c.Id == id).SingleOrDefault());
+            return Task.FromResult(Customers.Where(c => c.Id == id).SingleOrDefault());
         }
 
         public Task<IEnumerable<Customer>> GetAll()
         {
-            return new Task<IEnumerable<Customer>>(() => Customers);
+            return Task.FromResult(Customers);
         }
     }
 }

@@ -35,6 +35,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Demo.Business\Demo.Business.csproj" />
+    <ProjectReference Include="..\Demo.DataAccess.Api\Demo.DataAccess.Api.csproj" />
     <ProjectReference Include="..\Demo.DataAccess.Memory\Demo.DataAccess.Memory.csproj" />
     <ProjectReference Include="..\Demo.Interfaces\Demo.Interfaces.csproj" />
     <ProjectReference Include="..\Demo.Models\Demo.Models.csproj" />

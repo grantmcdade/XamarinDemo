@@ -1,6 +1,7 @@
 ﻿using Demo.Interfaces;
 using Demo.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Demo.Business
 {
@@ -13,14 +14,14 @@ namespace Demo.Business
             _dataSource = dataSource;
         }
 
-        public IEnumerable<Customer> GetAll()
+        public async Task<IEnumerable<Customer>> GetAll()
         {
-            return _dataSource.GetAll();
+            return await _dataSource.GetAll();
         }
 
-        public Customer Get(int id)
+        public async Task<Customer> Get(int id)
         {
-            return _dataSource.Get(id);
+            return await _dataSource.Get(id);
         }
     }
 }

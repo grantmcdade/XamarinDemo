@@ -8,8 +8,8 @@ namespace Demo.Interfaces
 {
     public interface IRepository<T>
     {
-        IEnumerable<T> GetAll();
+        Task<IEnumerable<T>> GetAll();
 
-        T Get(int id);
+        Task<T> Get(int id);
     }
 }
